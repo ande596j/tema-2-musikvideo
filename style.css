@@ -56,13 +56,18 @@ nav, article, nav ul li a,figure{
     -webkit-border-radius:10px;
     border-radius:10px;
 }
+
 #page{
     width:700px;
     margin:0 auto;
     position:relative;
 }
 
+img{ width: auto;
+    display: block;
 
+
+}
 article{
     background-color:purple;
     margin:3em 0;
@@ -131,23 +136,20 @@ footer a.by{
 
 footer a.up{
     float:right;}
+
 /*GRID til iPad*/
 @media screen and (min-width: 700px){
-    .maininspiration {
+    body {
         display: grid;
         grid-template-columns: auto 45% 20px 45% auto;
-        grid-template-areas: ". header header header ."
-        "mellenrum mellenrum mellenrum mellenrum mellenrum"
-        ". musikvideo musikvideo musikvideo ."
-        "mellenrum mellenrum mellenrum mellenrum mellenrum"
-        ". billedetafdem . nyhedside ."
-        "mellenrum mellenrum mellenrum mellenrum mellenrum"
-        ". gallery gallery gallery ."
-        "mellenrum mellenrum mellenrum mellenrum mellenrum"
-        ". bio . andenbilledet ."
-        "mellenrum mellenrum mellenrum mellenrum mellenrum"
-        ". book book book ."
-        "footer footer footer footer footer";
+        grid-template-areas:
+                "header header header header header"
+                ". musikvideo musikvideo musikvideo ."
+                ". billedetafdem . nyhedside ."
+                ". gallery gallery gallery ."
+                ". bio . andenbilledet ."
+                ". book book book ."
+                "footer footer footer footer footer";
     }
 
 
@@ -155,25 +157,19 @@ footer a.up{
     header{
         grid-area: header;
     }
-    .mellenrum{
-        grid-area: mellenrum;
-        background: #464646;
-        padding: 50px;
-    }
-
     .article1{
         grid-area: musikvideo;
     }
     .billedetafdem{
         grid-area: billedetafdem;
+        padding: 50px;
     }
-
     .article2{
         grid-area: nyhedside;
     }
-
     .gallery{
         grid-area: gallery;
+        padding: 50px;
     }
     .article3{
         grid-area: bio;
@@ -183,6 +179,7 @@ footer a.up{
     }
     .book{
         grid-area: book;
+        padding: 50px;
     }
     footer{
         grid-area: footer;
