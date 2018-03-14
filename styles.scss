@@ -135,3 +135,58 @@ footer a.by{
 footer a.up{
   float:right;
 }
+
+/*GRID til iPad*/
+@media screen and (min-width: 700px){
+  body {
+    display: grid;
+    grid-template-columns: auto 45% 20px 45% auto;
+    grid-template-areas:
+            "header header header header header"
+            ". musikvideo musikvideo musikvideo ."
+            ". billedetafdem . nyhedside ."
+            ". gallery gallery gallery ."
+            ". bio . andenbilledet ."
+            ". book book book ."
+            "footer footer footer footer footer";
+  }
+
+
+
+  header{
+    grid-area: header;
+  }
+  .article1{
+    grid-area: musikvideo;
+  }
+  .billedetafdem{
+    grid-area: billedetafdem;
+    padding: 50px;
+  }
+  .article2{
+    grid-area: nyhedside;
+  }
+  .gallery{
+    grid-area: gallery;
+    padding: 50px;
+  }
+  .article3{
+    grid-area: bio;
+  }
+  .andenbilledet{
+    grid-area: andenbilledet;
+  }
+  .book{
+    grid-area: book;
+    padding: 50px;
+  }
+  footer{
+    grid-area: footer;
+  }
+}
+
+
+
+
+
+
